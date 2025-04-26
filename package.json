@@ -1,6 +1,6 @@
 {
   "name": "audire-api",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "API de mi proyecto personal de la universidad",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@tsconfig/node22": "^22.0.1",
+    "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
     "eslint": "^9.25.0",
     "globals": "^16.0.0",
@@ -32,6 +33,13 @@
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.30.1"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "express": "^5.1.0",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
   }
 }
