@@ -15,6 +15,10 @@ const sequelize = new Sequelize({
 });
 
 // Inicializar modelos en base de datos (crear tablas)
-initUserModel(sequelize);
+const initDB = () => {
+    initUserModel(sequelize);
+};
+
+initDB();
 
 export { sequelize, User };
