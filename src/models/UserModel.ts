@@ -1,9 +1,9 @@
 import { DataTypes, Model, Sequelize } from 'sequelize';
 
-export class User extends Model {
-    private id!: number;
-    private name!: string;
-    private email!: string;
+interface UserAttributes{
+    id: number;
+    name: string;
+    email: string;
 }
 
 export function initUserModel(sequelize: Sequelize): typeof User {
@@ -19,6 +19,7 @@ export function initUserModel(sequelize: Sequelize): typeof User {
         },
         email: {
             type: DataTypes.STRING,
+            allowNull: false,
             unique: true,
         },
     },
@@ -28,5 +29,6 @@ export function initUserModel(sequelize: Sequelize): typeof User {
     }
     );
 
+    console.log("Modelo de usuario creado");
     return User;
 }
