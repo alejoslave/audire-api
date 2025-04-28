@@ -56,9 +56,10 @@ app.listen(port, () => {
 try {
     (async ()=>{
         await sequelize.authenticate();
-        console.log('--> Connection has been established successfully.');
+        await sequelize.sync();
+        console.log('--> Connection a la base de datos EXITOSA!')
     })()
 
 } catch (error) {
-    console.error('** ERROR AL CONCECTAR A LA BASE DE DATOS: ', error);
+    console.error('** ERROR AL CONECTAR A LA BASE DE DATOS: ', error);
 }
