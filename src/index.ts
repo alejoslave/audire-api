@@ -1,6 +1,4 @@
 import express from "express";
-import {Sequelize} from "sequelize";
-import {Json} from "sequelize/lib/utils";
 const { sequelize, User } = require("./config/connectionDB");
 
 const app = express();
