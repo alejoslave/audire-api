@@ -6,6 +6,13 @@ interface UserAttributes{
     email: string;
 }
 
+export class User extends Model implements UserAttributes{
+    declare id: number;
+    declare name: string;
+    declare email: string;
+}
+
+
 export function initUserModel(sequelize: Sequelize): typeof User {
     User.init({
         id: {
